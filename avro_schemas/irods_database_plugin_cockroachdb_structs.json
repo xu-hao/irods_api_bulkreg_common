@@ -1,0 +1,116 @@
+{
+    "type" : "record",
+    "namespace" : "irods",
+    "name" : "Bulk",
+    "fields" : [
+        {
+            "name" : "collections",
+            "type" :{
+                "type" : "record",
+                "name" : "Collection",
+                "fields" : [ {
+                  "name" : "parent_coll_name",
+                  "type" : "string"
+                }, {
+                  "name" : "coll_name",
+                  "type" : "string"
+                }, {
+                  "name" : "coll_owner_name",
+                  "type" : "string"
+                }, {
+                  "name" : "coll_owner_zone",
+                  "type" : "string"
+                }, {
+                  "name" : "coll_map_id",
+                  "type" : "long"
+                }, {
+                  "name" : "coll_inheritance",
+                  "type" : "string"
+                }, {
+                  "name" : "coll_type",
+                  "type" : "string"
+                }, {
+                  "name" : "coll_info1",
+                  "type" : "string"
+                }, {
+                  "name" : "coll_info2",
+                  "type" : "string"
+                }, {
+                  "name" : "coll_expiry_ts",
+                  "type" : "string"
+                }, {
+                  "name" : "r_comment",
+                  "type" : "string"
+                }, {
+                  "name" : "create_ts",
+                  "type" : "string"
+                }, {
+                  "name" : "modify_ts",
+                  "type" : "string"
+                } ]
+            }
+        },
+        {
+            "name": "data_objects",
+            "type":{
+                "type" : "record",
+                "name" : "DataObject",
+                "fields" : [ {
+                  "name" : "parent_coll_name",
+                  "type" : "string"
+                }, {
+                  "name" : "data_name",
+                  "type" : "string"
+                }, {
+                  "name" : "data_repl_num",
+                  "type" : "int"
+                }, {
+                  "name" : "data_version",
+                  "type" : "string"
+                }, {
+                  "name" : "data_type_name",
+                  "type" : "string"
+                }, {
+                  "name" : "data_size",
+                  "type" : "long"
+                }, {
+                  "name" : "data_path",
+                  "type" : "string"
+                }, {
+                  "name" : "data_owner_name",
+                  "type" : "string"
+                }, {
+                  "name" : "data_owner_zone",
+                  "type" : "string"
+                }, {
+                  "name" : "data_is_dirty",
+                  "type" : "int"
+                }, {
+                  "name" : "data_status",
+                  "type" : "string"
+                }, {
+                  "name" : "data_checksum",
+                  "type" : "string"
+                }, {
+                  "name" : "data_expiry_ts",
+                  "type" : "string"
+                }, {
+                  "name" : "r_comment",
+                  "type" : "string"
+                }, {
+                  "name" : "create_ts",
+                  "type" : "string"
+                }, {
+                  "name" : "modify_ts",
+                  "type" : "string"
+                }, {
+                  "name" : "resc_id",
+                  "type" : "long"
+                }
+                ]
+            } 
+        }
+    ]
+}
+
+  

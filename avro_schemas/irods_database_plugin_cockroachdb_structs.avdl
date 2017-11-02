@@ -1,0 +1,46 @@
+
+protocol Bulk {
+    record Collection {
+        string parent_coll_name;
+        string coll_name;
+        string coll_owner_name;
+        string coll_owner_zone;
+        long coll_map_id;
+        string coll_inheritance;
+        string coll_type;
+        string coll_info1;
+        string coll_info2;
+        string coll_expiry_ts;
+        string r_comment;
+        string create_ts;
+        string modify_ts;
+    }
+
+    record DataObject {
+        string parent_coll_name;
+        string data_name;
+        int data_repl_num;
+        string data_version;
+        string data_type_name;
+        long data_size;
+        string data_path;
+        string data_owner_name;
+        string data_owner_zone;
+        int data_is_dirty;
+        string data_status;
+        string data_checksum;
+        string data_expiry_ts;
+        string r_comment;
+        string create_ts;
+        string modify_ts;
+        long resc_id;
+    }
+    record Bulk {
+        array<Collection> collections;
+        array<DataObject> data_objects;
+    }
+    int bulk(Bulk bulk);
+}
+
+
+
