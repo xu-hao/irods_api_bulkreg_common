@@ -26,10 +26,12 @@ protocol Bulk {
         string data_path;
         string data_owner_name;
         string data_owner_zone;
+        long data_map_id;
         int data_is_dirty;
         string data_status;
         string data_checksum;
         string data_expiry_ts;
+        string data_mode;
         string r_comment;
         string create_ts;
         string modify_ts;
