@@ -3,6 +3,7 @@
     "namespace" : "irods",
     "name" : "Bulk",
     "fields" : [
+        { "name" : "parallel", "type" : "boolean"},
         {
             "name" : "collections",
             "type" :{

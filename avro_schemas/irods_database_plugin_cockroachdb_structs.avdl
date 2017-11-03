@@ -38,6 +38,7 @@ protocol Bulk {
         long resc_id;
     }
     record Bulk {
+        boolean parallel;
         array<Collection> collections;
         array<DataObject> data_objects;
     }
