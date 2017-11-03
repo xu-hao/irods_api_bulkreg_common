@@ -22,4 +22,9 @@ install(
   DESTINATION usr/include/irods
 )
 
+install(
+  FILES
+  ${CMAKE_SOURCE_DIR}/avro_schemas/${REQ_AVRO_FILE}.json
+  DESTINATION ${IRODS_HOME_DIRECTORY}/avro_schemas
+)
 
