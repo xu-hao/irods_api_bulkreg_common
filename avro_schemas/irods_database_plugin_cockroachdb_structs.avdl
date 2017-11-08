@@ -35,7 +35,7 @@ protocol Bulk {
         string r_comment;
         string create_ts;
         string modify_ts;
-        long resc_id;
+        string resc_name;
     }
     record Bulk {
         boolean parallel;

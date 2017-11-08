@@ -116,8 +116,8 @@
                       "name" : "modify_ts",
                       "type" : "string"
                     }, {
-                      "name" : "resc_id",
-                      "type" : "long"
+                      "name" : "resc_name",
+                      "type" : "string"
                     } ]
                 }
             } 
