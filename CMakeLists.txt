@@ -5,7 +5,7 @@ find_package(IRODS 4.3.0 EXACT REQUIRED)
 set(CMAKE_C_COMPILER ${IRODS_EXTERNALS_FULLPATH_CLANG}/bin/clang)
 set(CMAKE_CXX_COMPILER ${IRODS_EXTERNALS_FULLPATH_CLANG}/bin/clang++)
 
-project(irods-database-plugin-cockroachdb-common C CXX)
+project(irods-api-plugin-bulkreg-common C CXX)
 
 include(${IRODS_TARGETS_PATH})
 
@@ -42,9 +42,9 @@ link_libraries(${IRODS_EXTERNALS_FULLPATH_BOOST}/lib/libboost_program_options.so
 include_directories(${IRODS_EXTERNALS_FULLPATH_CLANG}/include/c++/v1)
 set(CMAKE_MODULE_LINKER_FLAGS "${CMAKE_MODULE_LINKER_FLAGS} -Wl,-z,defs")
 
-include(database_plugin_cockroachdb_common.cmake)
+include(api_plugin_bulkreg_common.cmake)
 
-set(CPACK_PACKAGE_FILE_NAME "irods-database-plugin-cockroachdb-common${IRODS_PACKAGE_FILE_NAME_SUFFIX}")
+set(CPACK_PACKAGE_FILE_NAME "irods-api-plugin-bulkreg-common${IRODS_PACKAGE_FILE_NAME_SUFFIX}")
 set(CPACK_INCLUDE_TOPLEVEL_DIRECTORY OFF)
 set(CPACK_COMPONENT_INCLUDE_TOPLEVEL_DIRECTORY OFF)
 set(CPACK_COMPONENTS_GROUPING IGNORE)
@@ -74,10 +74,10 @@ set(CPACK_RPM_PACKAGE_AUTOPROV 0)
 
 set(CPACK_ARCHIVE_COMPONENT_INSTALL OFF)
 
-set(CPACK_DEBIAN_PACKAGE_NAME "irods-database-plugin-cockroachdb-common")
+set(CPACK_DEBIAN_PACKAGE_NAME "irods-api-plugin-bulkreg-common")
 set(CPACK_DEBIAN_PACKAGE_DEPENDS "${IRODS_PACKAGE_DEPENDENCIES_STRING}, irods-runtime (= ${IRODS_VERSION}), libc6")
 
-set(CPACK_RPM_PACKAGE_NAME "irods-database-plugin-cockroachdb-common")
+set(CPACK_RPM_PACKAGE_NAME "irods-api-plugin-bulkreg-common")
 if (IRODS_LINUX_DISTRIBUTION_NAME STREQUAL "centos" OR IRODS_LINUX_DISTRIBUTION_NAME STREQUAL "centos linux")
   set(CPACK_RPM_PACKAGE_REQUIRES "${IRODS_PACKAGE_DEPENDENCIES_STRING}, irods-runtime = ${IRODS_VERSION}, openssl")
 elseif (IRODS_LINUX_DISTRIBUTION_NAME STREQUAL "opensuse")

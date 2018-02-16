@@ -1,6 +1,6 @@
 set(
     REQ_AVRO_FILE
-  irods_database_plugin_cockroachdb_structs
+  irods_api_plugin_bulkreg_structs
 )
 
 file(MAKE_DIRECTORY "${CMAKE_BINARY_DIR}/include")
